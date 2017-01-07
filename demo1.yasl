@@ -1,0 +1,20 @@
+program demo;
+  const a = -1;
+  int n;
+  bool b;
+  proc f(int step, int x);
+    int x2;
+    begin
+      x2 = x + step;
+      x = x2;
+    end;
+  begin
+    n = 10;
+    b = n > 0;
+    while b do begin
+      print n;
+      f(a, n);
+      b = n > 0;
+    end;
+    print 'BOOM';
+  end.
